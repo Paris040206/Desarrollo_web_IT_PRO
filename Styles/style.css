@@ -7,3 +7,18 @@ nav{
 #principal{
     background-color: Blue;
 }
+
+h2+p{
+    font-size: x-large;
+}
+h2~p{
+    font-size: red;
+}
+
+div>p{
+    font-size: 80px;
+}
+
+div p{
+    font-size: 56px;
+}
