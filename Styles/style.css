@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{--ink:#202c28;--muted:#66736d;--cream:#f7f6f0;--green:#315b4b;--lime:#cce881;--line:#e4e5dc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.site-header,footer{max-width:1160px;margin:auto;padding:26px 32px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Manrope,sans-serif;font-weight:800;font-size:23px;letter-spacing:-1.2px}.brand span{color:#82a949}
+nav{display:flex;gap:34px;color:#56625c;font-size:14px}nav a:hover{color:var(--green)}
+.hero{max-width:1160px;margin:auto;padding:74px 32px 90px;min-height:530px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;color:#77934e;margin:0 0 17px}
+h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Manrope,sans-serif;letter-spacing:-2px;line-height:1.1}
+h1{font-size:clamp(42px,6vw,70px);margin-bottom:22px}h1 span{color:#77934e}
+.intro{max-width:440px;color:var(--muted);font-size:17px;margin-bottom:30px}
+.button{display:inline-flex;align-items:center;gap:22px;background:var(--green);color:white;padding:13px 20px;border-radius:5px;font-size:14px;font-weight:600;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#244637}.button span{font-size:20px;line-height:1}
+.hero-art{height:350px;position:relative;overflow:hidden;border-radius:8px;background:#e6eadb}.sun{position:absolute;width:190px;height:190px;border-radius:50%;background:#d5e7a8;top:35px;right:65px}.shape{position:absolute;bottom:-80px;width:360px;height:270px;border-radius:50% 50% 0 0}.shape-one{background:#a9bc89;left:-55px;transform:rotate(-12deg)}.shape-two{background:#54785c;right:-95px;bottom:-115px;transform:rotate(12deg)}.art-note{position:absolute;z-index:2;top:105px;left:55px;background:var(--cream);padding:18px 23px;font-family:Manrope,sans-serif;font-size:20px;font-weight:700;line-height:1.25;box-shadow:0 10px 30px #344b3018;transform:rotate(-5deg)}
+.about{border-top:1px solid var(--line);max-width:1096px;margin:auto;padding:76px 0;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end}.about h2,.contact h2{font-size:42px;margin-bottom:0}.about-copy{max-width:470px;color:var(--muted);margin:0 0 4px}
+.cards{max-width:1096px;margin:0 auto 88px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:27px;background:#fff;border:1px solid #eeeee8;border-radius:7px}.card-icon{display:grid;place-items:center;width:39px;height:39px;border-radius:50%;background:#eff3e5;color:#668347;font-size:20px;margin-bottom:24px}.card h3{font-size:20px;letter-spacing:-.5px;margin-bottom:9px}.card p{color:var(--muted);font-size:14px;margin:0}
+.contact{max-width:1096px;margin:0 auto 60px;background:var(--green);color:white;padding:38px 42px;border-radius:8px;display:flex;align-items:center;justify-content:space-between}.contact .eyebrow{color:var(--lime);margin-bottom:12px}.contact h2{font-size:34px}.button-light{background:var(--lime);color:var(--ink)}.button-light:hover{background:#dbf29b}
+footer{border-top:1px solid var(--line);max-width:1096px;color:var(--muted);font-size:12px;padding-left:0;padding-right:0}footer .brand{color:var(--ink);font-size:19px}footer p{margin:0}
+@media(max-width:760px){.site-header,footer{padding:21px 22px}.site-header nav{gap:16px;font-size:12px}.hero{padding:45px 22px 60px;grid-template-columns:1fr;gap:38px}.hero-art{height:280px}.about,.cards,.contact{margin-left:22px;margin-right:22px}.about{padding:56px 0;grid-template-columns:1fr;gap:25px}.about h2{font-size:36px}.cards{grid-template-columns:1fr;margin-bottom:55px}.contact{padding:30px 25px;gap:25px;align-items:flex-start;flex-direction:column}.contact h2{font-size:29px}footer{margin:0 22px}}
+@media(max-width:420px){.site-header nav{gap:10px}.brand{font-size:20px}nav{font-size:11px!important}.hero-art{height:235px}.sun{width:145px;height:145px}.art-note{left:32px;top:75px}}
