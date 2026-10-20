@@ -1,10 +1,12 @@
-:root{
+/* Gemini y yo */
+:root {
     --primario: #0d6efd;
     --secundario: #6c757d;
     --fondo: #f8f9fa;
     --texto: #212529;
 }
-*{
+
+* {
     /* font-size: 62.5%; */
     margin: 0;
     padding: 0;
@@ -12,56 +14,58 @@
 }
 
 /*Recuadro principal*/
-#principal{
-    width: min(100% -4rem, 100rem);
+#principal {
+    width: min(100% - 4rem, 100rem);
     margin: 3rem auto;
     padding: 3rem;
-    background-color: var(--primario);
+    background-color: var(--fondo);
+    color: var(--texto);
     border-radius: 1rem;
-    box-shadow: 0 4px 16px #000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Barra de navegación */
-.navbar a:hover{
-    color: white;
-    background-color: var(--primario);
-}
-.navbar{
+.navbar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
 }
-.navbar a:focus-visible{
-    outline: 2px solid var(--secundario);    
+
+/* Enlaces de la barra de navegación */
+.navbar a {
+    color: var(--primario);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
 
-/*La clase se llama navbar */
-/* a se rere usa para los enlaces, y la clase navbar es para el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. La clase navbar se aplica al elemento nav, que es el contenedor de los enlaces. */
-.navbar a{ 
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.navbar a:hover{
-    transform: translateY(-3px) scale(1.2) rotate(0.5deg);
-}
-
-.header,.footer{
+.navbar a:hover {
+    color: #ffffff;
     background-color: var(--primario);
-    color: white;
+    transform: translateY(-2px);
+}
+
+.navbar a:focus-visible {
+    outline: 2px solid var(--texto);
+    outline-offset: 2px;
+}
+
+.header,
+.footer {
+    background-color: var(--primario);
+    color: #ffffff;
     text-align: center;
+    padding: 2rem 1rem;
 }
 
 @media (max-width: 500px) {
     .navbar {
         flex-direction: column;
     }
+
     .navbar a {
         text-align: center;
     }
 }
-
-
-
-
-
