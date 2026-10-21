@@ -11,13 +11,14 @@ let alumno = {
 }
 
 //Array
-let calificaciones = [6,7,10];
+let calificaciones = [6, 7, 10];
 
 pizarron.innerHTML = "<br> El alumno " + alumno.nombre + " tiene las siguientes calificaciones: " + calificaciones.join(", ") + ".";
 
 // Ej 2. Funciones
-function saludar(){
-    pizarron.innerHTML += "<br> Hola "+alumno.nombre; //Se usa para todo
+function saludar() {
+    let saludo = " fngldfngl";
+    pizarron.innerHTML += "<br> Hola " + alumno.nombre + saludo; //Se usa para todo
 }
 
 // Ej 3. Propiedades y métodos en JS
@@ -27,19 +28,26 @@ let profe = {
     apellido_paterno: "Delgado",
     apellido_materno: "Gonzales",
     clase: "Ecuaciones diferenciales",
-    nombreCompleto(){
+    nombreCompleto() {
         return this.nombre + " " + this.apellido_paterno + " " + this.apellido_materno
     }
 }
 
-pizarron.innerHTML+="<br>"+ profe.nombreCompleto();
+pizarron.innerHTML += "<br>" + profe.nombreCompleto();
 
 // EJ4. Metodos en arrays
 //Push y pop
 calificaciones.push(5);
-pizarron.innerHTML+="<br> Nuevas calificaciones " + calificaciones.join(", ");
+pizarron.innerHTML += "<br> Nuevas calificaciones: " + calificaciones.join(", ");
 calificaciones.pop();
 calificaciones.push(6);
-pizarron.innerHTML+="<br> Nuevas calificaciones " + calificaciones.join(", ");
+pizarron.innerHTML += "<br> Nuevas calificaciones: " + calificaciones.join(", ");
 
+//filter
+let aprobadas = calificaciones.filter(n => n >= 8);
+pizarron.innerHTML += "<br> Aprobadas: " + aprobadas.join(", ");
+//map
+let duplicado =  calificaciones.map(n => n*2);
+pizarron.innerHTML += "<br> Duplicado: " + duplicado.join(", "); //+ saludo. Es una variable local de otro lado
+//
 
