@@ -10,7 +10,7 @@ let simbolo = Symbol("age");
 //var nombre = "Juan";
 console.log("Bienvenido a la clase de desarrollo web_oculto " + nombre);
 
-document.getElementById("name").textContent = nombre;
+document.getElementById("name").textContent = nombre; //typeof nombre  
 document.getElementById("age").textContent = edad;
 document.getElementById("city").textContent = ciudad;
 
