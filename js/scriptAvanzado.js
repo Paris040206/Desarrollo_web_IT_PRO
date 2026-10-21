@@ -13,11 +13,11 @@ let alumno = {
 //Array
 let calificaciones = [6,7,10];
 
-pizarron.innerHTML = "<br>El alumno " + alumno.nombre + " tiene las siguientes calificaciones: " + calificaciones.join(", ") + ".";
+pizarron.innerHTML = "<br> El alumno " + alumno.nombre + " tiene las siguientes calificaciones: " + calificaciones.join(", ") + ".";
 
 // Ej 2. Funciones
 function saludar(){
-    pizarron.innerHTML = "<br>Hola "+alumno.nombre; //Se usa para todo
+    pizarron.innerHTML += "<br> Hola "+alumno.nombre; //Se usa para todo
 }
 
 // Ej 3. Propiedades y métodos en JS
@@ -34,5 +34,12 @@ let profe = {
 
 pizarron.innerHTML+="<br>"+ profe.nombreCompleto();
 
+// EJ4. Metodos en arrays
+//Push y pop
+calificaciones.push(5);
+pizarron.innerHTML+="<br> Nuevas calificaciones " + calificaciones.join(", ");
+calificaciones.pop();
+calificaciones.push(6);
+pizarron.innerHTML+="<br> Nuevas calificaciones " + calificaciones.join(", ");
 
 
