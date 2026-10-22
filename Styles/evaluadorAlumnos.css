@@ -49,3 +49,29 @@ button{
 button:hover{
     background: #18b5bb;
 }
+
+/* División */
+
+form {
+display: grid;
+gap: 1rem;
+}
+
+label {
+font-weight: bold;
+}
+
+#mensaje {
+overflow-wrap: anywhere;
+}
+
+[hidden] {
+display: none !important;
+}
+
+.panel{
+    margin-bottom: 6rem;
+    border: black width=8;
+    background: #9ec1be;
+    border-radius: 0.8rem;
+}
