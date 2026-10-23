@@ -1,10 +1,20 @@
+//Definir elementos DOM
 const formRegistro = document.querySelector("#formRegistro");
 const formLogin = document.querySelector("#formLogin");
 const mensaje = document.querySelector("#mensaje");
 const sesion = document.querySelector("#sesion");
-const cerrarSesion = document.querySelector("#cerrarSesion");
+const cerrar = document.querySelector("#cerrarSesion");
+
+//Definir flujo
+formRegistro.addEventListener("submit", registrarUsuario);
+formLogin.addEventListener("submit", iniciarSesion);
+cerrar.addEventListener("click",cerrarSesion)
 
 recuperarSesion();
+
+
+
+//Definir funciones
 
 function mostrarMensaje(texto){
     mensaje.textContent = texto;
@@ -60,6 +70,7 @@ function iniciarSesion(event){
 
     sessionStorage.setItem("sesionActual", JSON.stringify(datosSesion));
     mostrarSesion(datosSesion)
+    cerrar.hidden=false;
     formLogin.reset();
 }
 
@@ -75,15 +86,22 @@ function recuperarSesion(){
             let usuario = JSON.parse(datos);
             mostrarSesion(usuario);
             mostrarMensaje("Sesion recuperada");
+            cerrar.hidden=false;
         }
     }catch{
         mostrarMensaje("No fue posible cargar los datos de sesión");
     }
 }
 
+function cerrarSesion(){
+    sessionStorage.removeItem("sesionActual");
+    sesion.textContent="";
+    cerrar.hidden=true;
+    mostrarMensaje("Cerraste sesión :)")
+    window.location.href = "../index.html";
+}
 
-formRegistro.addEventListener("submit", registrarUsuario);
-formLogin.addEventListener("submit", iniciarSesion);
+
 
 
 
