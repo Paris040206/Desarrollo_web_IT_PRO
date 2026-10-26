@@ -21,7 +21,7 @@ function registrarUsuario(event){
      let nombre = document.querySelector("#nombreRegistro").value.trim();
      let correo = document.querySelector("#correoRegistro").value.trim();
      let contra = document.querySelector("#passwordRegistro").value.trim();
-     let usuariosRegistrados = [];
+     let usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios") || "[]");
 
      if(nombre==""||correo==""||contra==""){
          mostrarMensaje("Todos los campos son obligatorios")

@@ -3,16 +3,16 @@
 const formLogin = document.querySelector("#formLogin");
 const mensaje = document.querySelector("#mensaje");
 const sesion = document.querySelector("#sesion");
-const cerrar = document.querySelector("#cerrarSesion");
+//const cerrar = document.querySelector("#cerrarSesion");
+const btnRegistro = document.querySelector("#irRegistro"); //Nuevo
 
 //Definir flujo
 //formRegistro.addEventListener("submit", registrarUsuario);
 formLogin.addEventListener("submit", iniciarSesion);
-cerrar.addEventListener("click",cerrarSesion)
+//cerrar.addEventListener("click",cerrarSesion)
+btnRegistro.addEventListener("click", function(){ window.location.href = "registro.html";}); //Nuevo
 
 recuperarSesion();
-
-
 
 //Definir funciones
 
@@ -69,37 +69,32 @@ function iniciarSesion(event){
     }
 
     sessionStorage.setItem("sesionActual", JSON.stringify(datosSesion));
-    mostrarSesion(datosSesion)
-    cerrar.hidden=false;
-    formLogin.reset();
+    //mostrarSesion(datosSesion)
+    //cerrar.hidden=false;
+    //formLogin.reset();
+    window.location.href = "home.html";
 }
 
-function mostrarSesion(usuario){
-    mensaje.textContent = "Iniciaste sesión correctamente";
-    sesion.textContent = "Bienvenido al sistema "+ usuario.nombre;
-}
+// function recuperarSesion(){
+//     try{
+//         let datos = sessionStorage.getItem("sesionActual");
+//         if(datos){
+//             let usuario = JSON.parse(datos);
+//             mostrarSesion(usuario);
+//             mostrarMensaje("Sesion recuperada");
+//             cerrar.hidden=false;
+//         }
+//     }catch{
+//         mostrarMensaje("No fue posible cargar los datos de sesión");
+//     }
+// }
 
 function recuperarSesion(){
-    try{
-        let datos = sessionStorage.getItem("sesionActual");
-        if(datos){
-            let usuario = JSON.parse(datos);
-            mostrarSesion(usuario);
-            mostrarMensaje("Sesion recuperada");
-            cerrar.hidden=false;
-        }
-    }catch{
-        mostrarMensaje("No fue posible cargar los datos de sesión");
+    if(sessionStorage.getItem("sesionActual")){
+        window.location.href = "home.html";
     }
 }
 
-function cerrarSesion(){
-    sessionStorage.removeItem("sesionActual");
-    sesion.textContent="";
-    cerrar.hidden=true;
-    mostrarMensaje("Cerraste sesión :)")
-    window.location.href = "../index.html";
-}
 
 
 
