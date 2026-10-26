@@ -75,3 +75,55 @@ display: none !important;
     background: #9ec1be;
     border-radius: 0.8rem;
 }
+
+.encabezado-Materiales{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.encabezado-Materiales h2,
+.encabezado-Materiales p{
+    margin: 0 0 0.5rem;
+}
+
+#cargarDatos{
+    margin-right: 0;
+}
+
+#estadoDatos{
+    font-style: italic;
+}
+
+#contenedorDatos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    gap: 1.6rem;
+}
+
+.card-material{
+    padding: 1.6rem;
+    background-color: #f1f1f1;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-material h3{
+    margin: 0 0 0.8rem;
+    color: #5718bb;
+}
+
+.card-material p{
+    margin: 0 0 0.8rem;
+}
+
+.card-material h4{
+    margin: 0;
+    font-size: 1.4rem;
+    color: #18b5bb;
+}
+
+
+
+
