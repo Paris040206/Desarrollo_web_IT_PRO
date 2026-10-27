@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../Styles/evaluadorAlumnos.css">
+    <script src="../js/registro_materiales.js" defer></script>
+</head>
+
+<body>
+    <main class="contenedor">
+        <h1>Registrar materiales</h1>
+        <p id="mensaje" aria-live="polite"></p>
+        <section class = "panel">   
+            <form id="formMaterial">
+                <label for="formula">Formula</label>
+                <input type="text" id="formula" required>
+
+                <label for="microestructura">Microestructura</label>
+                <input type="text" id="microestructura">
+
+                <label for="id_estructura">id_estructura</label>
+                <input type="text" id="id_estructura" required>
+
+                <label for="id_fuente">id_fuente</label>
+                <input type="text" id="id_fuente" required>
+
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

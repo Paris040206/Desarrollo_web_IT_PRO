@@ -3,7 +3,7 @@ const cerrar = document.querySelector("#cerrarSesion");
 const mensaje = document.querySelector("#mensaje");
 const sesion = document.querySelector("#sesion");
 const btnInicio = document.querySelector("#irInicio"); //Nuevo
-const API_BASE_URL="http://localhost:3000";
+const API_BASE_URL="https://geographical-carbon-excessive-encouraged.trycloudflare.com";
 const contenedorDatos = document.querySelector("#contenedorDatos");
 const estadoDatos = document.querySelector("#estadoDatos");
 const btnCargarDatos = document.querySelector("#cargarDatos");
@@ -71,10 +71,17 @@ async function cargarDatos() {
             formula.textContent = material.formula
             const microestructura = document.createElement("p")
             microestructura.textContent = material.microestructura
-            const metodo = document.createElement("p")
-            metodo.textContent = material.nombre_metodo
+            const id_estructura = document.createElement("p")
+            id_estructura.textContent = material.id_estructura
+            const id_fuente = document.createElement("p")
+            id_fuente.textContent = material.id_fuente
 
-            card.append(formula, microestructura, metodo)
+            //const metodo = document.createElement("p")
+            //metodo.textContent = material.nombre_metodo
+
+            card.append(formula, microestructura, id_estructura, id_fuente)
+            
+            //card.append(formula, microestructura, metodo)
             contenedorDatos.appendChild(card)
         });
 
