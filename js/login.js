@@ -6,6 +6,7 @@ const sesion = document.querySelector("#sesion");
 //const cerrar = document.querySelector("#cerrarSesion");
 const btnRegistro = document.querySelector("#irRegistro"); //Nuevo
 
+
 //Definir flujo
 //formRegistro.addEventListener("submit", registrarUsuario);
 formLogin.addEventListener("submit", iniciarSesion);

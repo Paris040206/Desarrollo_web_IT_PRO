@@ -2,6 +2,10 @@ const API_BASE_URL ="http://localhost:3000";
 
 const formMaterial=document.querySelector("#formMaterial");
 const mensaje=document.querySelector("#mensaje");
+const btnirHome=document.querySelector("#irHome");
+
+btnirHome.addEventListener("click", function(){ window.location.href = "home.html";}); 
+
 
 async function enviarPOST(datos) {
     const respuesta = await fetch(API_BASE_URL + "/api/Proyecto_Materiales", {

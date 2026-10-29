@@ -7,10 +7,13 @@ const API_BASE_URL="http://localhost:3000";
 const contenedorDatos = document.querySelector("#contenedorDatos");
 const estadoDatos = document.querySelector("#estadoDatos");
 const btnCargarDatos = document.querySelector("#cargarDatos");
+const btnRegistro_material = document.querySelector("#registrarMateriales");
+
 
 //Definir flujo
 cerrar.addEventListener("click",cerrarSesion)
 btnInicio.addEventListener("click", function(){window.location.href = "../index.html"});
+btnRegistro_material.addEventListener("click", function(){window.location.href = "../pages/registro_materiales.html"});
 btnCargarDatos.addEventListener("click", cargarDatos);
 
 recuperarSesion();
