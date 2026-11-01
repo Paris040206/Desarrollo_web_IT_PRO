@@ -22,11 +22,14 @@ function registrarUsuario(event){
      let correo = document.querySelector("#correoRegistro").value.trim();
      let contra = document.querySelector("#passwordRegistro").value.trim();
      let usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios") || "[]");
+    let correoExiste = usuariosRegistrados.some(usuario => usuario.email.toLowerCase() === correo);
 
      if(nombre==""||correo==""||contra==""){
          mostrarMensaje("Todos los campos son obligatorios")
      }else if(contra.length<8){
          mostrarMensaje("La contraseña debe ser de mínimo 8 caracteres")
+     }else if(correoExiste){
+        mostrarMensaje("Ese correo ya está registrado")
      }else{
          usuariosRegistrados.push(
              {
