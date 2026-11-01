@@ -14,6 +14,7 @@ const btnRegistro_material = document.querySelector("#registrarMateriales");
 cerrar.addEventListener("click",cerrarSesion)
 btnRegistro_material.addEventListener("click", function(){window.location.href = "../pages/registro_materiales.html"});
 btnCargarDatos.addEventListener("click", cargarDatos);
+cargarDatos(); //cargar los datos al iniciar la página
 
 recuperarSesion();
 
@@ -50,6 +51,7 @@ function mostrarSesion(usuario){
 }
 
 async function cargarDatos() {
+    estadoDatos.hidden = false;
     estadoDatos.textContent="Consultando materiales...";
     contenedorDatos.replaceChildren();
     try{
@@ -85,9 +87,11 @@ async function cargarDatos() {
             
             //card.append(formula, microestructura, metodo)
             contenedorDatos.appendChild(card)
+            estadoDatos.hidden = true;
         });
 
     }catch(error){
+        estadoDatos.hidden = true;
         console.log("Error al cargar los datos: " + error);
         estadoDatos.textContent="No fue posible cargar los materiales. Revisa la conexión";
     }
