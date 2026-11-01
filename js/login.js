@@ -11,7 +11,7 @@ const btnRegistro = document.querySelector("#irRegistro"); //Nuevo
 //formRegistro.addEventListener("submit", registrarUsuario);
 formLogin.addEventListener("submit", iniciarSesion);
 //cerrar.addEventListener("click",cerrarSesion)
-btnRegistro.addEventListener("click", function(){ window.location.href = "registro.html";}); //Nuevo
+btnRegistro.addEventListener("click", function(){ window.location.href = "pages/registro.html";}); //Nuevo
 
 recuperarSesion();
 
@@ -73,7 +73,7 @@ function iniciarSesion(event){
     //mostrarSesion(datosSesion)
     //cerrar.hidden=false;
     //formLogin.reset();
-    window.location.href = "home.html";
+    window.location.href = "pages/home.html";
 }
 
 // function recuperarSesion(){

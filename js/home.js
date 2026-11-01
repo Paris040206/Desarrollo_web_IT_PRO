@@ -3,7 +3,7 @@ const cerrar = document.querySelector("#cerrarSesion");
 const mensaje = document.querySelector("#mensaje");
 const sesion = document.querySelector("#sesion");
 const btnInicio = document.querySelector("#irInicio"); //Nuevo
-const API_BASE_URL="https://neutral-cowboy-pts-engage.trycloudflare.com";
+const API_BASE_URL="https://rome-undertaken-seconds-town.trycloudflare.com";
 const contenedorDatos = document.querySelector("#contenedorDatos");
 const estadoDatos = document.querySelector("#estadoDatos");
 const btnCargarDatos = document.querySelector("#cargarDatos");
@@ -12,7 +12,6 @@ const btnRegistro_material = document.querySelector("#registrarMateriales");
 
 //Definir flujo
 cerrar.addEventListener("click",cerrarSesion)
-btnInicio.addEventListener("click", function(){window.location.href = "../index.html"});
 btnRegistro_material.addEventListener("click", function(){window.location.href = "../pages/registro_materiales.html"});
 btnCargarDatos.addEventListener("click", cargarDatos);
 
