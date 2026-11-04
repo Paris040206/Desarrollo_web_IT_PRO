@@ -17,9 +17,9 @@ recuperarSesion();
 
 //Definir funciones
 
-function mostrarMensaje(texto){
-    mensaje.textContent = texto;
-}
+ function mostrarMensaje(texto){
+     mensaje.textContent = texto;
+ }
 
 // function registrarUsuario(event){
 //      event.preventDefault();
