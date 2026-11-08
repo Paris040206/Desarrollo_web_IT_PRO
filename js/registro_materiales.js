@@ -1,4 +1,4 @@
-const API_BASE_URL ="https://affiliate-minolta-incidents-database.trycloudflare.com";
+const API_BASE_URL ="https://physically-less-tokyo-usgs.trycloudflare.com";
 
 const formMaterial=document.querySelector("#formMaterial");
 const mensaje=document.querySelector("#mensaje");
